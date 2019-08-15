@@ -1,7 +1,20 @@
 import React, { useState, useEffect } from "react";
+
+import NavBar from './components/NavBar.js';
+
+import Header from './components/Header.js';
+
 import axios from "axios";
+
 import NasaCard from './components/NasaCard.js';
-import "./App.css";
+
+import ButtonSUI from './components/ButtonSUI.js';
+
+import Footer from './components/Footer.js';
+
+import AppTwo from './AppTwo'
+
+import "./App.scss";
 
 function App() {
   //changed to data object instead of individual
@@ -25,10 +38,11 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+
+      <NavBar />
+
+      <Header />
+
       <NasaCard
                 //title
                 title={data.title}
@@ -39,8 +53,14 @@ function App() {
                 //explanation
                 explanation={data.explanation} />
                 
+      <ButtonSUI />
+
+      <Footer />
+
     </div>
   );
 }
 
 export default App;
+
+
