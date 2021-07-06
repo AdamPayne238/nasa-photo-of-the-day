@@ -1,0 +1,11 @@
+.header{
+
+    width: 100%;
+    background: black;
+    color: #3B9D92;
+    font-size: 2rem;
+    &:hover{
+        color: #42BDC4;
+        text-shadow: 1px 1px hotpink;
+    }
+}
